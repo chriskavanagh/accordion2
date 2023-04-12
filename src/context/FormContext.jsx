@@ -34,7 +34,7 @@ export const FormProvider = ({ children }) => {
     const name = e.target.name;
 
     const value = type === "checkbox" ? e.target.checked : e.target.value;
-    console.log(e.target.type);
+
     setData((prevData) => ({
       ...prevData,
       [name]: value,

@@ -1,9 +1,11 @@
 import { useState } from "react";
-
 import "./App.css";
 import CheckBox from "./components/CheckBox";
 
 function App() {
+  const [name, setName] = useState("");
+  const [type, setType] = useState("");
+
   const [data, setData] = useState({
     billFirstName: "",
     billLastName: "",
@@ -25,7 +27,9 @@ function App() {
 
   function handleChange(e) {
     const type = e.target.type;
+    setType(type);
     const name = e.target.name;
+    setName(name);
 
     const value = type === "checkbox" ? e.target.checked : e.target.value;
 
@@ -38,6 +42,8 @@ function App() {
   return (
     <div className="App">
       <h1>Hello World 😺</h1>
+      <h2 style={{ color: "red", fontFamily: "fantasy" }}>Type is {type}</h2>
+      <h2 style={{ color: "pink" }}>Name is {name}</h2>
       <CheckBox data={data} setData={setData} handleChange={handleChange} />
     </div>
   );
