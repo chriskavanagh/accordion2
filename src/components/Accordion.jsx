@@ -15,7 +15,7 @@ export default function Accordion({ items, keepOthersOpen }) {
   }, [items]);
   return (
     <div style={styles.wrapper}>
-      // optional chaining ?.
+      {/* optional chaining ?. */}
       {accordionItems?.map((item, key) => (
         <div>
           <h2 key={item.id.toString()}>{item.label}</h2>
