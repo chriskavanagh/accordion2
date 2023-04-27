@@ -1,5 +1,7 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import "./root.css";
+import TopNavLink from "../components/TopNavLink";
+import { NavLink, Outlet } from "react-router-dom";
 
 export default function Root() {
   return (
@@ -7,40 +9,17 @@ export default function Root() {
       <nav style={styles.nav}>
         <ul style={styles.ul}>
           <li className="nav__item">
-            <Link
-              to="/"
-              style={{
-                textDecoration: "none",
-                color: "#efb42b",
-                fontSize: "1.2rem",
-              }}
-            >
-              Home Page
-            </Link>
+            <TopNavLink to={"/"} label={"Home"} />
           </li>
           <li className="nav__item">
-            <Link
+            <NavLink
               to="/about"
-              style={{
-                textDecoration: "none",
-                color: "#efb42b",
-                fontSize: "1.2rem",
-              }}
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+              }
             >
               About
-            </Link>
-          </li>
-          <li className="nav__item">
-            <Link
-              to="/"
-              style={{
-                textDecoration: "none",
-                color: "#efb42b",
-                fontSize: "1.2rem",
-              }}
-            >
-              Home
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>

@@ -1,13 +1,39 @@
-import React from "react";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
-function About() {
+export default function About() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
   return (
-    <div>
-      <h1>About</h1>
-      <Link to="/">Home Page</Link>
-    </div>
+    <section style={styles.wrapper}>
+      <header style={styles.header}>
+        <h1>About Section</h1>
+      </header>
+      <div>
+        <button className="btn2" onClick={() => console.log("HELLO")}>
+          Newsletter!
+        </button>
+      </div>
+    </section>
   );
 }
 
-export default About;
+const styles = {
+  wrapper: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    fontSize: "29px",
+    quotes: "initial",
+  },
+  header: {
+    marginTop: "4rem",
+    marginBottom: "3rem",
+  },
+};

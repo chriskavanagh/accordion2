@@ -4,3 +4,22 @@
   box-sizing: border-box;
   margin: 0px;
 }
+
+button {
+  cursor: pointer;
+}
+.btn2 {
+  color: #c5ceda;
+  background: #0039a6;
+  padding: 15px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+}
+
+.btn2:is(:hover) {
+  outline-offset: 0px;
+  outline: 4px #1f75fe solid;
+  border: 2px solid #efb42b;
+}

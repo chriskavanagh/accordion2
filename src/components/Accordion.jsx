@@ -14,15 +14,15 @@ export default function Accordion({ items, keepOthersOpen }) {
     }
   }, [items]);
   return (
-    <div style={styles.wrapper}>
+    <section style={styles.wrapper}>
       {/* optional chaining ?. */}
-      {accordionItems?.map((item, key) => (
-        <div>
-          <h2 key={item.id.toString()}>{item.label}</h2>
-          <p>{item.renderContent()}</p>
+      {accordionItems?.map((item) => (
+        <div style={styles.item} key={item.id.toString()}>
+          <h2>{item.label}</h2>
+          {item.renderContent()}
         </div>
       ))}
-    </div>
+    </section>
   );
 }
 
@@ -32,6 +32,10 @@ const styles = {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    rowGap: "1rem",
+    rowGap: "7rem",
+  },
+  item: {
+    border: "3px solid red",
+    textAlign: "center",
   },
 };

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Accordion from "./Accordion";
 
-function HomePage() {
+export default function HomePage() {
   const [checked, setChecked] = useState(false);
   const [name, setName] = useState("");
   const [type, setType] = useState("");
@@ -11,9 +11,9 @@ function HomePage() {
   const articles = [
     {
       id: 1,
-      label: "Cool Label",
+      label: <h3>Cool Label</h3>,
       renderContent: () => (
-        <p>
+        <p style={styles.item1}>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -56,4 +56,8 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+const styles = {
+  item1: {
+    maxWidth: "350px",
+  },
+};
