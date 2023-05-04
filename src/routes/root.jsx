@@ -1,7 +1,6 @@
-import React from "react";
 import "./root.css";
+import { Outlet } from "react-router-dom";
 import TopNavLink from "../components/TopNavLink";
-import { NavLink, Outlet } from "react-router-dom";
 
 export default function Root() {
   return (
@@ -12,14 +11,16 @@ export default function Root() {
             <TopNavLink to={"/"} label={"Home"} />
           </li>
           <li className="nav__item">
-            <NavLink
-              to="/about"
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
-              }
-            >
-              About
-            </NavLink>
+            <TopNavLink to={"/contact"} label={"Contact"} />
+          </li>
+          <li className="nav__item">
+            <TopNavLink to={"/contacts"} label={"Contacts"} />
+          </li>
+          <li className="nav__item">
+            <TopNavLink to={"/about"} label={"About"} />
+          </li>
+          <li className="nav__item">
+            <TopNavLink to={"/query"} label={"Queries"} />
           </li>
         </ul>
       </nav>

@@ -11,4 +11,8 @@ a.active {
   padding: 8px 12px;
   border-radius: 5px;
   color: white;
+  outline: 1px solid gold;
+}
+a:last-of-type {
+  margin-left: 3rem;
 }

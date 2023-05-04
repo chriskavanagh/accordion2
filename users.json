@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "label": "Cool Label",
+    "name": "Chris"
+  },
+  {
+    "id": 2,
+    "label": "Twitter Label",
+    "name": "Gus"
+  },
+  {
+    "id": 3,
+    "label": "Instagram Label",
+    "name": "MG"
+  }
+]

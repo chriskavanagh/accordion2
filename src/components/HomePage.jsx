@@ -25,7 +25,7 @@ export default function HomePage() {
       id: 2,
       label: "Twitter Label",
       renderContent: () => (
-        <ul>
+        <ul style={{ padding: "2rem" }}>
           <li>List Item 1</li>
           <li>List Item 2</li>
           <li>List Item 3</li>

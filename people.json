@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "label": "Cool Label",
+    "name": "Chris"
+  },
+  {
+    "id": 2,
+    "label": "Twitter Label",
+    "name": "Gus"
+  },
+  {
+    "id": 3,
+    "label": "Instagram Label",
+    "name": "MG"
+  },
+  {
+    "id": 4,
+    "label": "Javascript",
+    "name": "Gus"
+  },
+  {
+    "id": 5,
+    "label": "American Untold Stories",
+    "name": "Mark"
+  },
+  {
+    "id": 6,
+    "label": "American Untold Stories",
+    "name": "Brian"
+  }
+]

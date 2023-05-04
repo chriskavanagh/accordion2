@@ -18,7 +18,7 @@ export default function Accordion({ items, keepOthersOpen }) {
       {/* optional chaining ?. */}
       {accordionItems?.map((item) => (
         <div style={styles.item} key={item.id.toString()}>
-          <h2>{item.label}</h2>
+          {item.label}
           {item.renderContent()}
         </div>
       ))}
@@ -37,5 +37,7 @@ const styles = {
   item: {
     border: "3px solid red",
     textAlign: "center",
+    padding: "2rem",
+    marginBottom: "3rem",
   },
 };

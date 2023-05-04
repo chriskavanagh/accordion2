@@ -1,14 +1,17 @@
-import { useState } from "react";
-import { Routes, Route, Outlet, Link } from "react-router-dom";
+import Queries from "./components/Queries";
+import Contact from "./components/Contact";
+//import { Routes, Route, Outlet, Link } from "react-router-dom";
+//import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import "./App.css";
+
+//const queryClient = new QueryClient();
 
 function App() {
   return (
     <div className="App">
       <h1>Hello World 😺</h1>
-      <Link to="/about">About Page</Link>
-      <h2 style={{ color: "red", fontFamily: "fantasy" }}>Type is {type}</h2>
-      <h2 style={{ color: "pink" }}>Name is {name}</h2>
+      <Queries />
+      <Contact />
     </div>
   );
 }
