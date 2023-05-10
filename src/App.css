@@ -1,1 +1,39 @@
-
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+ul {
+  text-align: center;
+  list-style: none;
+}
+.btnGroup {
+  margin-top: 5rem;
+}
+button {
+  padding: 12px 15px;
+  background-color: rgb(35, 62, 92);
+  border: 2px solid orange;
+  color: #efb42b;
+}
+.Appbtn1 {
+  border-right: none;
+}
+.Appbtn2 {
+  border-right: none;
+  border-left: 1px dotted orange;
+  border-right: 1px dotted orange;
+}
+.Appbtn3 {
+  margin-top: 1rem;
+  border-left: none;
+}
+p {
+  max-width: 400px;
+  margin-bottom: 3rem;
+}

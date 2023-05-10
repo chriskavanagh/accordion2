@@ -12,6 +12,7 @@ axiosClient.defaults.headers = {
 axiosClient.defaults.timeout = 2000;
 axiosClient.defaults.withCredentials = true;
 
+// functions for fetching data from api's
 export function getRequest(URL) {
   return axiosClient.get(`/${URL}`).then((response) => response);
 }

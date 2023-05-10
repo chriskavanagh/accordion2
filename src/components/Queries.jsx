@@ -1,6 +1,7 @@
 //import axios from "axios";
 import { getRequest } from "../client/api";
-import { useQuery, useQueryClient, useMutation } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
+import { ReactQueryDevtoolsPanel } from "react-query-devtools";
 
 const fetchUsers = () => getRequest("./contacts.json").then((res) => res.data);
 
@@ -17,17 +18,22 @@ export default function Queries() {
     isLoading,
     isError,
     status,
+    fetchStatus,
   } = useQuery({
     queryKey: ["repo"],
     queryFn: fetchUsers,
+    onSuccess: (context) => {
+      console.log(`${JSON.stringify(context)}`);
+    },
   });
 
   if (isLoading === true) {
     return <h2>Loading. . .</h2>;
   }
-  if (isError == true) {
+  if (isError === true) {
     return <h2>You Have An Error</h2>;
   }
+  console.log(fetchStatus);
   console.log(status);
 
   /* if (data.length) {
@@ -61,9 +67,12 @@ export default function Queries() {
       >
         Add New Post
       </button>
-      {POSTS.map((p) => (
+      {POSTS?.map((p) => (
         <h3>{p.title}</h3>
       ))} */}
+      <div>
+        <ReactQueryDevtoolsPanel style={styles.tool} />
+      </div>
     </div>
   );
 }
@@ -97,5 +106,9 @@ const styles = {
     color: "#233e5c",
     borderRadius: "5px",
     fontWeight: "bold",
+  },
+  tool: {
+    position: fixed,
+    bottom: 0,
   },
 };

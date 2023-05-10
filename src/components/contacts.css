@@ -1,0 +1,14 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 0.2fr 0.2fr;
+  grid-template-rows: auto;
+  row-gap: 2rem;
+  justify-content: center;
+  margin-top: 5rem;
+}
+h2 {
+  text-align: center;
+}
+p {
+  text-align: center;
+}

@@ -17,7 +17,7 @@ export function loader() {
 
 export default function Contacts() {
   const contacts = useLoaderData();
-  console.log("My Contacts " + contacts);
+  //console.log("My Contacts " + contacts);
   return (
     <div className="wrapper">
       {contacts.map((c) => (

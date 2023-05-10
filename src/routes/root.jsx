@@ -22,6 +22,9 @@ export default function Root() {
           <li className="nav__item">
             <TopNavLink to={"/query"} label={"Queries"} />
           </li>
+          <li className="nav__item">
+            <TopNavLink to={"/app"} label={"App"} />
+          </li>
         </ul>
       </nav>
       <div className="main">

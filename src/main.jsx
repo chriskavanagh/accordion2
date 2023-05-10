@@ -1,10 +1,11 @@
 import "./index.css";
 import React from "react";
-//import App from "./App";
+import App from "./App";
 import Root from "./routes/root";
 import About from "./components/About";
 import ReactDOM from "react-dom/client";
 import Contact from "./components/Contact";
+import Post from "./components/posts/Post";
 import Queries from "./components/Queries";
 import HomePage from "./components/HomePage";
 import ErrorPage from "./components/ErrorPage";
@@ -43,15 +44,23 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
+        path: "/post",
+        element: <Post />,
+      },
+      {
         path: "/query",
         element: <Queries />,
+      },
+      {
+        path: "/app",
+        element: <App />,
       },
     ],
   },
 ]);
 
 const queryClient = new QueryClient({
-  defaultOptions: { queries: { staleTime: 1000 * 60 * 5 } },
+  //defaultOptions: { queries: { staleTime: 1000 * 60 * 5 } },
 });
 
 ReactDOM.createRoot(document.getElementById("root")).render(
